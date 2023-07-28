@@ -1,15 +1,48 @@
+#player1 {
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+}
+
+#player2 {
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
 .player {
-    color: #399BA8;
+    display: flex;
+    flex-direction: column;
+}
+
+.rsp {
+    margin: auto;
 }
 
 .rock {
-    color: #399BA8;
+    background-color: #B22222;
 }
 
 .sciss {
-    color: #399BA8;
+    background-color: #FFD700;
 }
 
 .paper {
-    color: #399BA8;
+    background-color: #1E90FF;
 }
