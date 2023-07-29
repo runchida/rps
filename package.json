@@ -4,7 +4,9 @@
   "description": "Rock Scissor Paper game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test-dist/bundle.js",
+    "build-test": "webpack --config webpack.test.js",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -12,8 +14,12 @@
   "devDependencies": {
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "mocha": "^10.2.0",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
   }
 }
