@@ -28,13 +28,14 @@ export function calculateWinner (choiceP1, choiceP2) {
     return result;
 }
 
-export function updateScores (roundResult) {
-    const current = getCurrentScores();
-    if (roundResult == 1) {
-        current[0] = current[0] + 1;
-    } else if (roundResult == -1) {
-        current[0] = current[0] + 1;
+// update score depending on the round result
+export function updateScores (current, roundResult) {
+    let newScores = [current[0], current[1]];
+    if (roundResult == constants.p1wins) {
+        newScores[0] = current[0] + 1;
+    } else if (roundResult == constants.p2wins) {
+        newScores[1] = current[1] + 1;
     }
-    return current;
+    return newScores;
 }
 
