@@ -1,37 +1,22 @@
 // Interaction functionalities
-addEventListener("keydown", onKeydown);
+document.getElementById('rock1').addEventListener('click', () => onClick('rock1'))
+document.getElementById('sciss1').addEventListener('click', () => onClick('sciss1'))
+document.getElementById('paper1').addEventListener('click', () => onClick('paper1'))
+console.log('Event listeners added')
 
-// detect key press 
-// only a, s, d for P1 and j, k, l for P2 allowed
-export function onKeydown(event) {
-    let choiceP1 = 0;
-    let choiceP2 = 0;
-    switch (event.keyCode) {
-        case 65:
-            console.log('rock1');
-            choiceP1 = rock;
+// handles click on player choice
+function onClick(buttonId) {;
+    switch (buttonId) {
+        case 'rock1':
+          console.log('rock');
             break;
-        case 83:
-            console.log('sciss1');
-            choiceP1 = sciss;
+          case 'sciss1':
+            console.log('sciss');
             break;
-        case 68:
-            console.log('paper1');
-            choiceP1 = paper;
-            break;
-        case 74:
-            console.log('rock2');
-            choiceP2 = rock;
-            break;
-        case 75:
-            console.log('sciss2');
-            choiceP2 = sciss;
-            break;
-        case 76:
-            console.log('paper2');
-            choiceP2 = paper;
+          case 'paper1':
+            console.log('paper');
             break;
         default:
-            break;
-    }
-};
+          console.log(buttonId);
+      }
+}
