@@ -7,14 +7,20 @@
     </head>
     <body>
         <div class="head">
+            <div id="mode-container">
+                <h1>Mode: </h1>
+                <button id="bot-button" class="head-button"><img class="icon" src="../icons/bot.png" alt="BotVSBot" /></button>
+                <button id="pVBot-button" class="head-button"><img class="icon" src="../icons/PvBot.png" alt="PlayerVSBot" /></button>
+                <p id="instruction">Choose your fighters</p>
+            </div>
             <h1>Welcome to the fight!</h1>
             <div class="score">
                 <p id="score1">score1</p>
                 <p id="score2">score2</p>
             </div>
-            <button>Restart</button>
+            <button class="head-button">Restart</button>
         </div>
-        <div class="game">
+        <div id="game-area" class="game">
                 <div class="picker-container">
                     <div id="rock1" class="rock rsp-container"><img class="icon" src="../icons/rock.png" alt="Rock" /></div>
                     <div id="sciss1" class="sciss rsp-container"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
@@ -22,15 +28,12 @@
                 </div>
                 <div class="battlefield">
                     <div></div>
-                    <div id ="picked1" class="picked">
-                    </div>
-                    <div class="result">
-                    </div>
+                    <div id ="picked1" class="rsp-container"></div>
+                    <div class="result"></div>
                 </div>
                 <div class="battlefield">
                     <div></div>
-                    <div id ="picked2" class="picked">
-                    </div>
+                    <div id ="picked2" class="rsp-container"></div>
                     <div class="result">
                     </div>
                 </div>

@@ -1,10 +1,8 @@
-import {
-    showPicked
-  } from "./uiActions";
+import { showPicked } from "./uiActions";
 
-// generate bot's choice for the round
-export function startBotPick () {
-    showPicked(getRandomNumber(), 2);
+// generate bot's choice and show picked choice for the chosen player
+export function startBotPick (playerNumber) {
+    showPicked(getRandomNumber(), playerNumber);
 }
 
 // generate a number from 1-3 
