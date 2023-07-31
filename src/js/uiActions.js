@@ -3,12 +3,29 @@ import { constants } from "./values";
 // reset and show icon of the picked choice in the player's battle field
 export function showPicked (picked, player) {
     const pickedIcon = document.createElement('img');
+    pickedIcon.classList = constants.rsp[picked-1] + ' icon';
     pickedIcon.src = getPicPath(picked);
     
     // pick player's slot, empty it and add new img
     const pickedSlot = document.getElementById('picked' + player);
     emptyElement(pickedSlot);
     pickedSlot.appendChild(pickedIcon);
+}
+
+// highlight selected mode and deselect the other
+export function highlightButton (mode) {
+    const buttons = document.getElementById('mode-container').querySelectorAll('button');
+    for(let button of buttons) {
+        if(button.id == mode + '-button') {
+            button.classList.add('selected-button');
+        } else {
+            button.classList = 'head-button';
+        }
+    }
+}
+
+export function showRoundResult () {
+
 }
 
 // show different instruction text in header for current mode
@@ -35,7 +52,7 @@ function getModeInstruction (mode) {
     let instruction = '';
     switch (mode) {
         case constants.bot:
-            instruction = 'Click the robot to fight again!'
+            instruction = 'Click fight to... fight!'
             break;
         case constants.pvBot:
             instruction = 'Click the icon on the left side to choose your weapon!'
@@ -75,9 +92,12 @@ export function addStartBvBButton (){
     const newButton = document.createElement('button');
     newButton.textContent = 'Fight!';
     newButton.id = 'bvb-button';
+    newButton.classList = 'head-button';
+
     const midHeader =  document.getElementById('midheader-container');
     midHeader.textContent = '';
     midHeader.appendChild(newButton);
+    return newButton;
 }
 
 export function removeBvBButton () {

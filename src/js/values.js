@@ -7,7 +7,8 @@ export const constants = {
     'p1wins': 'p1wins',
     'p2wins': 'p2wins',
     'bot': 'bot',
-    'pvBot': 'pvBot'
+    'pvBot': 'pvBot',
+    'rsp': ['paper', 'sciss', 'rock']
 }
 
 // scores P1, P2
