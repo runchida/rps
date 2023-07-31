@@ -1,6 +1,6 @@
 const assert = require('chai').assert
 import { calculateWinner, updateScores } from "../src/js/gameLogic";
-import { constants } from "../src/js/values";
+import { getCurrentScores, constants } from "../src/js/values";
 
 
 // test data
@@ -26,5 +26,9 @@ describe('Test score logic and results', () => {
             assert.equal(updateScores(current, constants.p1wins).every((element, index) => element == p1winRes[index]), true);
             assert.equal(updateScores(current, constants.p2wins).every((element, index) => element == p2winRes[index]), true);
             assert.equal(updateScores(current, constants.draw).every((element, index) => element == drawRes[index]), true);
+      }),
+      it('should get the right results', () => {
+        const scoreSoll = [0, 0]
+        assert.equal(getCurrentScores().every((element, index) => element == scoreSoll[index]), true);
       })
     })

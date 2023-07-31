@@ -25,6 +25,12 @@ export function cleanSelections () {
     emptyElement(document.getElementById('picked2'));
 }
 
+// show current scores on the header
+export function updateScoreUI (playerNumber, newScore) {
+    const score = document.getElementById('score' + playerNumber);
+    score.textContent = newScore;
+}
+
 function getModeInstruction (mode) {
     let instruction = '';
     switch (mode) {
@@ -61,5 +67,22 @@ function getPicPath (picked) {
 function emptyElement (element) {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
+    }
+}
+
+// add start button for BvB
+export function addStartBvBButton (){
+    const newButton = document.createElement('button');
+    newButton.textContent = 'Fight!';
+    newButton.id = 'bvb-button';
+    const midHeader =  document.getElementById('midheader-container');
+    midHeader.textContent = '';
+    midHeader.appendChild(newButton);
+}
+
+export function removeBvBButton () {
+    const bvbButton =  document.getElementById('bvb-button');
+    if (bvbButton) {
+        bvbButton.remove();
     }
 }

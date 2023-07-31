@@ -17,3 +17,7 @@ let currentScores = [0, 0];
 export function getCurrentScores () {
     return currentScores;
 }
+
+export function setCurrentScores (newScores) {
+    currentScores = [newScores[0], newScores[1]]
+}
