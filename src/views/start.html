@@ -6,7 +6,7 @@
         <title>RSP</title>
     </head>
     <body>
-        <div class="head">
+        <div class="header">
             <div id="mode-container">
                 <h1>Mode: </h1>
                 <button id="bot-button" class="head-button"><img class="icon" src="../icons/bot.png" alt="BotVSBot" /></button>
@@ -14,7 +14,7 @@
                 <p id="instruction">Choose your fighters</p>
             </div>
             <div id="midheader-container">
-                Welcome to the fight!
+                <p>Welcome to the fight!</p>
             </div>
             <div class="score">
                 <p id="score1" class="score-text" >0</p>
@@ -22,24 +22,24 @@
             </div>
             <button id="restart" class="head-button">Restart</button>
         </div>
-        <div id="game-area" class="game">
-            <div class="picker-container">
-                <div id="rock1" class="rock rsp-container"><img class="icon" src="../icons/rock.png" alt="Rock" /></div>
-                <div id="sciss1" class="sciss rsp-container"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
-                <div id="paper1" class="paper rsp-container"><img class="icon" src="../icons/paper.png" alt="Paper" /></div>
+        <div id="game-area" class="game-area">
+            <div class="picker-container picker-con1">
+                <div id="rock1" class="rock rsp picker"><img class="icon" src="../icons/rock.png" alt="Rock" /></div>
+                <div id="sciss1" class="sciss rsp picker"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
+                <div id="paper1" class="paper rsp picker"><img class="icon" src="../icons/paper.png" alt="Paper" /></div>
             </div>
-            <div class="battlefield">
+            <div class="battlefield battlefield1">
                 <div class="result"></div>
-                <div id ="picked1" class="rsp-container"></div>
+                <div id ="picked1" class="rsp picked"></div>
             </div>
-            <div class="battlefield">
+            <div class="battlefield battlefield2">
                 <div class="result"></div>
-                <div id ="picked2" class="rsp-container"></div>
+                <div id ="picked2" class="rsp picked"></div>
             </div>
-            <div class="picker-container">
-                <div id="rock2" class="rock rsp-container"><img class="icon" src="../icons/rock.png" alt="Rock" /></div>
-                <div id="sciss2" class="sciss rsp-container"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
-                <div id="paper2" class="paper rsp-container"><img class="icon" src="../icons/paper.png" alt="Paper" /></div>
+            <div class="picker-container picker-con2">
+                <div id="rock2" class="rock rsp picker"><img class="icon" src="../icons/rock.png" alt="Rock" /></div>
+                <div id="sciss2" class="sciss rsp picker"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
+                <div id="paper2" class="paper rsp picker"><img class="icon" src="../icons/paper.png" alt="Paper" /></div>
             </div>
         </div>
     </body>
