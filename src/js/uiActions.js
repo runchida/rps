@@ -32,7 +32,7 @@ export function showRoundResult () {
 export function changeModeInstruction (mode) {
     // clean instruction and add a new one
     const instruction = document.getElementById('instruction');
-    instruction.textContent = getModeInstruction(mode); ;
+    instruction.textContent = getModeInstruction(mode);
 
 } 
 
@@ -94,9 +94,9 @@ export function addStartBvBButton (){
     newButton.id = 'bvb-button';
     newButton.classList = 'head-button';
 
-    const midHeader =  document.getElementById('midheader-container');
-    midHeader.textContent = '';
-    midHeader.appendChild(newButton);
+    const start =  document.getElementById('start-container');
+    start.textContent = '';
+    start.appendChild(newButton);
     return newButton;
 }
 

@@ -7,20 +7,18 @@
     </head>
     <body>
         <div class="header">
-            <div id="mode-container">
-                <h1>Mode: </h1>
+            <div id="mode-container" class="mode-container">
+                <p class="mode-text">Mode: </p>
                 <button id="bot-button" class="head-button"><img class="icon" src="../icons/bot.png" alt="BotVSBot" /></button>
                 <button id="pvBot-button" class="head-button"><img class="icon" src="../icons/PvBot.png" alt="PlayerVSBot" /></button>
-                <p id="instruction">Choose your fighters</p>
             </div>
-            <div id="midheader-container">
-                <p>Welcome to the fight!</p>
+            <div id="start-container" class="start-container">
             </div>
             <div class="score">
                 <p id="score1" class="score-text" >0</p>
                 <p id="score2" class="score-text">0</p>
             </div>
-            <button id="restart" class="head-button">Restart</button>
+            <button id="restart" class="restart head-button">Restart</button>
         </div>
         <div id="game-area" class="game-area">
             <div class="picker-container picker-con1">
@@ -41,6 +39,9 @@
                 <div id="sciss2" class="sciss rsp picker"><img class="icon" src="../icons/sciss.png" alt="Scissor" /></div>
                 <div id="paper2" class="paper rsp picker"><img class="icon" src="../icons/paper.png" alt="Paper" /></div>
             </div>
+        </div>
+        <div class="footer-area">
+            <p id="instruction">Choose a mode to begin the fight. Fight on your own or use a bot to fight for you!</p>
         </div>
     </body>
 </html>
