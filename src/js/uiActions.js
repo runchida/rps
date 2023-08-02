@@ -24,10 +24,6 @@ export function highlightButton (mode) {
     }
 }
 
-export function showRoundResult () {
-
-}
-
 // show different instruction text in header for current mode
 export function changeModeInstruction (mode) {
     // clean instruction and add a new one

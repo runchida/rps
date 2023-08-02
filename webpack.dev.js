@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -13,6 +14,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
+                
             },
             {
                 test: /\.scss$/,
@@ -29,7 +31,12 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/views/start.html",
             filename: "./index.html",
-        })
+        }),
+        new ESLintPlugin({
+            context: path.resolve(__dirname, 'src'),
+            extensions: ['js', 'jsx'] // Specify the file extensions to lint
+            // Optionally, you can provide additional ESLint options here
+          })
     ],
 
     devServer: {

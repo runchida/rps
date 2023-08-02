@@ -17,7 +17,7 @@ module.exports = {
             {
                 test: /\.scss$/, // Match files ending with .css extension
                 use: ['style-loader', 'css-loader'], // Use these loaders for .css files
-              },
+            },
         ]
     },
     // generate index.html in dist

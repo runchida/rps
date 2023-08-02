@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test-dist/bundle.js",
-    "build-test": "webpack --config webpack.test.js",
-    "build-dev": "npx webpack --config webpack.dev.js",
-    "start": "webpack-dev-server --open"
+    "build-test": "npx webpack --config webpack.test.js",
+    "build-dev": "npx webpack --config webpack.dev.js ",
+    "start": "open ./dist/index.html"
   },
   "keywords": [],
   "author": "",
