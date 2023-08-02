@@ -1,5 +1,7 @@
 # rps
-Rock Scissor Paper game 
+A webapp for playing the classic Rock Scissor Paper game. 
+Rock Scissor Paper game built by Javascript, html and css
+Tools: webpack, mocha
 
 ## Installation
 To install the dependencies:
@@ -9,9 +11,16 @@ npm install
 
 ## Build 
 Webpack is used for the building process.
+
 ### Build to use
 ```
 npm run build-prod
+```
+
+### Start application
+Start application in a browser
+```
+npm run start
 ```
 
 ### Build for test
