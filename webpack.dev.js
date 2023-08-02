@@ -1,9 +1,9 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin")
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: '/src/index.js',
-    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
         filename: 'bundle.js', // Output file name
@@ -11,12 +11,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: /\.js$/,
                 exclude: /node_modules/,
             },
             {
-                test: /\.scss$/, // Match files ending with .css extension
-                use: ['style-loader', 'css-loader'], // Use these loaders for .css files
+                test: /\.scss$/,
+                use: [
+                'style-loader', // Inject styles into DOM
+                'css-loader',   // Translates CSS into CommonJS
+                'sass-loader'   // Compiles Sass to CSS
+                ],
               },
         ]
     },
@@ -26,5 +30,11 @@ module.exports = {
             template: "./src/views/start.html",
             filename: "./index.html",
         })
-    ]
+    ],
+
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        open: true,
+        port: 8080,
+      },
 }

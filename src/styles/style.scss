@@ -18,6 +18,8 @@
     height: 100%;
 }
 
+// HEADER AREA -----------------------------
+
 .head {
     display: flex;
     flex-direction: row;
@@ -41,6 +43,8 @@
     height: 100%;
 }
 
+// GAME AREA ------------------------
+
 .game {
     display: grid; 
     grid-template-columns: 1fr 2fr 2fr 1fr; 
@@ -48,8 +52,11 @@
     gap: 0px 0px; 
     grid-template-areas: 
         "picker-container1 battlefield1 battlefield2 picker-container2";
-    width: 100%;
+    width: 100vw;
     height: 90%;
+    min-height: 90%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .head-button.selected-button {
