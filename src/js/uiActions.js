@@ -48,7 +48,7 @@ function getModeInstruction (mode) {
     let instruction = '';
     switch (mode) {
         case constants.bot:
-            instruction = 'Click fight to... fight! Pick up a weapon if you want to fight.'
+            instruction = 'Click fight to let your bot fight! Pick up a weapon if you want to fight.'
             break;
         case constants.pvBot:
             instruction = 'Click the icon on the left side to choose your weapon!'
