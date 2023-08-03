@@ -1,7 +1,9 @@
 # rps
 A webapp for playing the classic Rock Scissor Paper game. 
 Rock Scissor Paper game built by Javascript, html and css
-Tools: webpack, mocha
+Tools: webpack, mocha, ESLint
+
+Please Enjoy :)
 
 ## Information
 Target Browser: Google Chrome
