@@ -29,6 +29,12 @@ Start application in a browser
 npm run start
 ```
 
+### Start application
+Start application in a browser
+```
+npm run start
+```
+
 ### Build for test
 ```
 npm run build-test
