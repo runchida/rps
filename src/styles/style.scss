@@ -166,10 +166,12 @@ body {
 
 .picker-con1 {
     grid-area: picker-container1;
+    
 }
   
 .picker-con2 {
     grid-area: picker-container2;
+    
 }
 
 .rsp {
@@ -179,6 +181,7 @@ body {
     margin: auto;
     padding: 5%;
     max-height: 30vh;
+    border-radius: 25px;
 }
 
 .picker {
@@ -198,6 +201,7 @@ body {
   max-width: 200px;
   height: 100%;
   display: block;
+  border-radius: 25px;
 }
 
 .rock {
@@ -210,6 +214,14 @@ body {
 
 .paper {
     background-color: #1E90FF;
+}
+
+.p1 {
+    background-color: #36AE7C;
+}
+
+.p2 {
+    background-color: #8062D6;
 }
 
 @media (min-width: 1400px) {
