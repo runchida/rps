@@ -8,7 +8,9 @@ export const constants = {
     'p2wins': 'p2wins',
     'bot': 'bot',
     'pvBot': 'pvBot',
-    'rsp': ['paper', 'sciss', 'rock']
+    'rsp': ['paper', 'sciss', 'rock'],
+    'bvbButton': 'bvb-button',
+    'gameArea': 'game-area'
 }
 
 // scores P1, P2

@@ -7,10 +7,11 @@ html {
 body {
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 1.5fr 20fr 1fr; 
+    grid-template-rows: 1.5fr 0.5fr 10fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
         "header-area"
+        "instruction-area"
         "game-area"
         "footer-area";
     height: 100%;
@@ -92,7 +93,23 @@ body {
 }
 
 .header-text {
-    font-size: large;
+    font-size: 4vh;
+}
+
+// INSTRUCTION AREA --------------------
+.instruction-area {
+    grid-area: instruction-area;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.instruction-text {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    text-justify: center;
+    font-size: 3vh;
 }
 
 // GAME AREA ------------------------
@@ -178,6 +195,7 @@ body {
 
 .icon {
   width: 100%; 
+  max-width: 200px;
   height: 100%;
   display: block;
 }
@@ -202,5 +220,11 @@ body {
 
     .head-button {
         max-width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .head-button {
+        min-width: 50px;
     }
 }

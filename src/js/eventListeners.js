@@ -1,4 +1,4 @@
-import { showPicked, changeModeInstruction, cleanSelections, updateScoreUI, addStartBvBButton, removeBvBButton, highlightButton } from "./uiActions";
+import { showPicked, changeModeInstruction, cleanSelections, updateScoreUI, highlightButton, unhideElement, hideElement } from "./uiActions";
 import { constants, getCurrentScores, setCurrentScores } from "./values";
 import { getRandomNumber} from "./botLogic";
 import { calculateWinner, updateScores } from "./gameLogic";
@@ -6,7 +6,8 @@ import { calculateWinner, updateScores } from "./gameLogic";
 // Interaction functionalities
 
 // hide game  area on start
-document.getElementById('game-area').classList.add('hidden');
+document.getElementById(constants.gameArea).classList.add('hidden');
+document.getElementById(constants.bvbButton).classList.add('hidden');
 
 // add event listeners on every choices for P1
 for(let choice of constants.rsp) {
@@ -16,6 +17,7 @@ for(let choice of constants.rsp) {
 document.getElementById(constants.bot + '-button').addEventListener('click', () => onClickMode(constants.bot));
 document.getElementById(constants.pvBot + '-button').addEventListener('click', () => onClickMode(constants.pvBot));
 document.getElementById('restart').addEventListener('click', onClickRestart);
+document.getElementById(constants.bvbButton).addEventListener('click', startBvBGame);
 console.log('Event listeners added');
 
 // start game after when mode is selected
@@ -36,19 +38,18 @@ function onClickMode (mode) {
   // cleanup and show fresh game area
   cleanSelections();
   changeModeInstruction(mode);
-  document.getElementById('game-area').classList.remove('hidden');
+  unhideElement(constants.gameArea);
 }
 
 // remove start button, if there is one
 function activatePvB () {
-  removeBvBButton();
+  hideElement(constants.bvbButton)
 }
 
 // add start button for bot games
 // highlight mode
 function activateBvB () {
-  const newButton = addStartBvBButton();
-  newButton.addEventListener('click', startBvBGame);
+  unhideElement(constants.bvbButton);
 }
 
 // generate bot's choice and show picked choice for both players

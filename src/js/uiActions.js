@@ -41,14 +41,14 @@ export function cleanSelections () {
 // show current scores on the header
 export function updateScoreUI (playerNumber, newScore) {
     const score = document.getElementById('score' + playerNumber);
-    score.textContent = newScore;
+    score.textContent = 'P' + playerNumber + ': ' + newScore;
 }
 
 function getModeInstruction (mode) {
     let instruction = '';
     switch (mode) {
         case constants.bot:
-            instruction = 'Click fight to... fight!'
+            instruction = 'Click fight to... fight! Pick up a weapon if you want to fight.'
             break;
         case constants.pvBot:
             instruction = 'Click the icon on the left side to choose your weapon!'
@@ -85,10 +85,17 @@ function emptyElement (element) {
 
 // add start button for BvB
 export function addStartBvBButton (){
+
     const newButton = document.createElement('button');
-    newButton.textContent = 'Fight!';
     newButton.id = 'bvb-button';
     newButton.classList = 'head-button';
+    
+    // Text in the button
+    const newButtonText = document.createElement('p');
+    newButtonText.classList = 'header-text';
+    newButtonText.textContent = 'Fight!'
+
+    newButton.appendChild(newButtonText);
 
     const start =  document.getElementById('start-container');
     start.textContent = '';
@@ -101,4 +108,12 @@ export function removeBvBButton () {
     if (bvbButton) {
         bvbButton.remove();
     }
+}
+
+export function unhideElement (elementID) {
+    document.getElementById(elementID).classList.remove('hidden');
+}
+
+export function hideElement (elementID) {
+    document.getElementById(elementID).classList.add('hidden');
 }
